@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.header-content .btn-primary {
+    background-color: #ff5722;
+    border-color: #ff5722;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Section Titles */
+section h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 2.5rem;
+    position: relative;
+    color: #333;
+}
+
+section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #007bff;
+    display: block;
+    margin: 10px auto 0;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+    color: #333;
+    padding: 60px 0;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Skills Section */
+.skills-section {
+    background: #007bff;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.skills-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #f4f7f6;
+    padding: 60px 0;
+}
+
+.projects-section .card {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projects-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.projects-section .card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+/* Experience Section */
+.experience-section {
+    background: #bd9df0;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.experience-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Certifications Section */
+.certifications-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.certifications-section .certification {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.certifications-section .certification:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact-section {
+    background: #fad8e6;
+    color: black;
+    padding: 60px 0;
+}
+
+.contact-section p a {
+    color: #fbd3ed;
+    text-decoration: underline;
+}
+
+.contact-section .btn-primary {
+    background-color: #7e616d;
+    border-color: #c2f1fa;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Education Section */
+.education-section {
+    background: linear-gradient(to right, #e299c5, #ede7df);
+    color: #fff;
+    padding: 60px 0;
+}
+
+.education-section h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #141414;
+}
+
+.education-section .education-item {
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.education-section .education-item:hover {
+    transform: translateY(-5px);
+}
+
+.education-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.education-section p {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.education-section p em {
+    font-style: italic;
+}
