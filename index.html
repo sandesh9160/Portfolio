@@ -6,214 +6,378 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandesh Kenchugundi | Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Animate.css CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Optional Custom CSS -->
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f4f7f6;
-        }
+<style>
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7f6;
+}
 
-        /* Header Section */
-        .header {
-            background: linear-gradient(to right, #c4ddf9, #dbd2ea);
-            color: #fff;
-            padding: 80px 0;
-            text-align: center;
-        }
+/* Header Section */
+.header {
+  background: linear-gradient(to right, #c4ddf9, #dbd2ea);
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
 
-        .header-content h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-        }
+.header-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
 
-        .header-content p {
-            font-size: 1.5rem;
-            margin-top: 10px;
-        }
+.header-content p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
 
-        .header-content .btn-primary {
-            background-color: #ff5722;
-            border-color: #ff5722;
-            margin-top: 20px;
-            font-size: 1.2rem;
-        }
+.header-content .btn-primary {
+  background-color: #ff5722;
+  border-color: #ff5722;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
 
-        .navbar {
-            background: linear-gradient(to right, #eb3ed1, #08bcfd);
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #eb3ed1, #08bcfd);
+}
 
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.8%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
 
-        }
+/* Section Titles */
+section h2 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 2.5rem;
+  position: relative;
+  color: #333;
+}
 
-        .navbar-toggler-icon {
-            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.8%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
-        }
+section h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #a7d0fc;
+  display: block;
+  margin: 10px auto 0;
+}
 
-        /* Section Titles */
-        section h2 {
-            margin-bottom: 40px;
-            text-align: center;
-            font-size: 2.5rem;
-            position: relative;
-            color: #333;
-        }
+/* About Section */
+.about-section {
+  background-color: #fff;
+  color: #0f0f0f;
+  padding: 60px 0;
+}
 
-        section h2::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: #a7d0fc;
-            display: block;
-            margin: 10px auto 0;
-        }
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
 
-        /* About Section */
-        .about-section {
-            background-color: #fff;
-            color: #0f0f0f;
-            padding: 60px 0;
-        }
+/* Skills Section */
+.skills-section {
+  background: #fffff4;
+  color: #030303;
+  padding: 60px 0;
+}
 
-        .about-section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
+.skills-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
 
-        /* Skills Section */
-        .skills-section {
-            background: #fffff4;
-            color: #030303;
-            padding: 60px 0;
-        }
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-        .skills-section h4 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
+.skill-item p {
+  flex-grow: 1;
+  margin: 0;
+}
 
-        /* Projects Section */
-        .projects-section {
-            background-color: #f4f7f6;
-            padding: 60px 0;
-        }
+/* Stylish and Animated Progress Bar */
+.skill-progress {
+  width: 60%;
+}
 
-        .projects-section .card {
-            background-color: #fff;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+.progress-bar {
+  background-color: #007bff;
+  transition: width 1s ease;
+}
 
-        .projects-section .card:hover {
-            transform: translateY(-5px);
-        }
+/* Projects Section */
+.projects-section {
+  background-color: #f4f7f6;
+  padding: 60px 0;
+}
 
-        .projects-section .card-img-top {
-            border-radius: 10px 10px 0 0;
-        }
+.projects-section .card {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        /* Experience Section */
-        .experience-section {
-            background: #ddd6e8;
-            color: black;
-            padding: 60px 0;
-        }
+.projects-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-        .experience-section h4 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
+.projects-section .card-img-top {
+  border-radius: 10px 10px 0 0;
+}
 
-        /* Certifications Section */
-        .certifications-section {
-            background-color: #f8f9fa;
-            padding: 60px 0;
-        }
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 
-        .certifications-section .certification {
-            background: #ffffff;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+.card-text {
+  font-size: 1rem;
+  color: #333;
+}
 
-        .certifications-section .certification:hover {
-            transform: translateY(-5px);
-        }
+ul.list-unstyled {
+  padding-left: 0;
+  margin-top: 10px;
+}
 
-        /* Contact Section */
-        .contact-section {
-            background: #dfcda4;
-            color: #040404;
-            padding: 60px 0;
-        }
+ul.list-unstyled li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
 
-        .contact-section p a {
-            color: #070707;
-            text-decoration: underline;
-        }
+ul.list-unstyled i {
+  color: #007bff;
+  margin-right: 0.5rem;
+}
 
-        .contact-section .btn-primary {
+/* Experience Section */
+.experience-section {
+  background: #ddd6e8;
+  color: black;
+  padding: 60px 0;
+}
 
-            border-color: #ece6e5;
-        }
+.experience-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
 
-        /* Footer */
-        .footer {
-            background-color: #000306;
-            color: #fff;
-            padding: 20px 0;
-        }
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-        .footer a {
-            color: #0a0a0a;
-            text-decoration: none;
-        }
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
+.timeline-content {
+  position: relative;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+.timeline-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.timeline-company {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.timeline-duration {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.timeline-details {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.timeline-details li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.timeline-details i {
+  color: #007bff;
+  margin-right: 0.5rem;
+}
+
+.timeline-actions {
+  margin-top: 15px;
+}
+
+.btn-outline-primary, .btn-outline-secondary {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #007bff;
+  box-shadow: 0 0 0 4px #f8f9fa;
+}
+
+/* Certifications Section */
+.certifications-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.certifications-section .certification {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.certifications-section .certification:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact-section {
+  background: #dfcda4;
+  color: #040404;
+  padding: 60px 0;
+}
+
+.contact-section p a {
+  color: #070707;
+  text-decoration: underline;
+}
+
+.contact-section .btn-primary {
+  border-color: #ece6e5;
+}
+
+/* Footer */
+.footer {
+  background-color: #000306;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Icon Animations */
+.animated-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-icon:hover {
+  transform: scale(1.2);
+}
+
+</style>
 </head>
 
 <body>
 
     <!-- Header Section -->
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand text-white" href="#">Sandesh Kenchugundi</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="header-content text-center mt-5 pt-5">
-            <h1>Sandesh Kenchugundi</h1>
-            <p>Full Stack Developer | Python, Django, JavaScript</p>
-            <a href="#contact" class="btn btn-primary mt-3">Get in Touch</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand text-white" href="#">Sandesh Kenchugundi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#about">
+                        <i class="fas fa-user"></i> About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#skills">
+                        <i class="fas fa-tools"></i> Skills
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#projects">
+                        <i class="fas fa-laptop-code"></i> Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#experience">
+                        <i class="fas fa-briefcase"></i> Experience
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#certifications">
+                        <i class="fas fa-certificate"></i> Certifications
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#contact">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+            </ul>
         </div>
+    </nav>
+</header>
+
+          <div class="header-content text-center mt-5 pt-5">
+          <h1 class="animate__animated animate__fadeInDown">Sandesh Kenchugundi</h1>
+          <p class="animate__animated animate__fadeInUp animate__delay-1s">Full Stack Developer | Python, Django, JavaScript</p>
+          <a href="#contact" class="btn btn-primary mt-3 animate__animated animate__bounceIn animate__delay-2s">Get in Touch</a>
+          </div>
+
     </header>
 
     <!-- About Section -->
@@ -223,73 +387,80 @@
                 <div class="col-md-4 text-center">
                     <img src="./profile.jpg" class="img-fluid rounded-circle mb-3" alt="Sandesh Kenchugundi">
                 </div>
-                <div class="col-md-8">
-                    <h2>About Me</h2>
-                    <p>I am currently pursuing my MCA at University College of Science, Saifabad. As a Full Stack
-                        Developer intern at AARAM IT Solutions, I developed web applications using Python and Django,
-                        and designed responsive front-end interfaces with HTML, CSS, and JavaScript. I am passionate
-                        about learning new technologies and optimizing project outcomes.</p>
-                    <a href="./SandeshResume.pdf" class="btn btn-primary">Download Resume</a>
+                    <div class="col-md-8">
+                          <h2>About Me</h2>
+                          <p>I am currently pursuing my Master of Computer Applications (MCA) at University College of Science, Saifabad. During my internship as a Full Stack Developer at AARAM IT Solutions, I engineered robust web applications using Python and Django while crafting dynamic, responsive front-end interfaces with HTML, CSS, and JavaScript. I have a strong passion for staying at the forefront of emerging technologies, constantly refining my skills, and driving innovation to deliver optimized, high-quality solutions in every project I undertake.</p>
+                      </div>
+                           <a href="./SandeshResume.pdf" class="btn btn-primary">Download Resume</a>
                 </div>
             </div>
         </div>
     </section>
     <!-- Education Section -->
     <section id="education" class="education-section">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="row">
-                <!-- Education Item 1 -->
-                <div class="col-md-6 mb-4">
-                    <div class="education-item">
-                        <h4>MCA</h4>
-                        <p><img src="./saifabad-removebg-preview.png" alt="bjr Logo"
-                                style="width: 60px; height: 60px;"><strong>University College of
-                                Sciences,
-                                Saifabad</strong></p>
-                        <p><em>Expected Graduation: Oct 2024</em></p>
-                        <p>Pursuing a Master’s degree in Computer Applications, focusing on full-stack development and
-                            advanced programming techniques.</p>
-                        <p><em>PERCENTAGE/CGPA:</em>8.0(Till SEM III)</p>
-                    </div>
+    <div class="container">
+        <h2>Education</h2>
+        <div class="row">
+            <!-- Education Item 1: MCA -->
+            <div class="col-md-6 mb-4">
+                <div class="education-item">
+                    <h4>Master of Computer Applications (MCA)</h4>
+                    <p>
+                        <img src="./saifabad-removebg-preview.png" alt="University College of Science Logo"
+                            style="width: 60px; height: 60px;">
+                        <strong>University College of Science, Saifabad</strong>
+                    </p>
+                    <p><em>Expected Graduation: October 2024</em></p>
+                    <p>Currently pursuing a postgraduate degree in Computer Applications, with an emphasis on full-stack development, advanced programming paradigms, and innovative software engineering practices.</p>
+                    <p><em>GPA:</em> 8.0 (Cumulative, up to Semester III)</p>
                 </div>
-                <!-- Education Item 2 -->
-                <div class="col-md-6 mb-4">
-                    <div class="education-item">
-                        <h4>Bachelor’s Degree in Computer Science</h4>
-                        <p><img src="./bjr.jpeg" alt="bjr Logo" style="width: 60px; height: 60px;"><strong> BJR
-                                Government Degree
-                                College,Narayanaguda</strong></p>
-                        <p><em>Graduated: May 2022</em></p>
-                        <p>Completed a Bachelor’s degree with a focus on software engineering, database management, and
-                            web technologies.</p>
-                        <p><em>PERCENTAGE/CGPA:</em>7.96</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="education-item">
-                        <h4>Intermediate(XII)</h4>
-                        <p><img src="./inter.png" alt="bjr Logo" style="width: 60px; height: 60px;"><strong>Sri
-                                Hari Hara Junior College,Ieeja</strong></p>
-                        <p><em>Graduated: May 2019</em></p>
-                        <p>Completed a Intermediate with a focus on Mathematics,Physics, and
-                            Chemistry.</p>
-                        <p><em>PERCENTAGE/CGPA:</em>82.3</p>
-                    </div>
+            </div>
 
+            <!-- Education Item 2: Bachelor's Degree -->
+            <div class="col-md-6 mb-4">
+                <div class="education-item">
+                    <h4>Bachelor of Science in Computer Science</h4>
+                    <p>
+                        <img src="./bjr.jpeg" alt="BJR College Logo" style="width: 60px; height: 60px;">
+                        <strong>BJR Government Degree College, Narayanaguda</strong>
+                    </p>
+                    <p><em>Graduated: May 2022</em></p>
+                    <p>Earned a bachelor's degree with a specialization in software development, database management systems, and cutting-edge web technologies, gaining expertise in various programming languages and frameworks.</p>
+                    <p><em>Percentage/CGPA:</em> 7.96</p>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="education-item">
-                        <h4>SSC(X)</h4>
-                        <p><img src="" alt="" style="width: 60px; height: 60px;"><strong>ZP High
-                                School,Ieeja</strong></p>
-                        <p><em>Graduated: March 2017</em></p>
-                        <p>Completed a SSC with a focus on Mathematics,Physics, and
-                            Chemistry.</p>
-                        <p><em>PERCENTAGE/CGPA:</em>7.2</p>
-                    </div>
+            </div>
+
+            <!-- Education Item 3: Intermediate -->
+            <div class="col-md-6 mb-4">
+                <div class="education-item">
+                    <h4>Intermediate (XII)</h4>
+                    <p>
+                        <img src="./inter.png" alt="Sri Hari Hara Junior College Logo" style="width: 60px; height: 60px;">
+                        <strong>Sri Hari Hara Junior College, Ieeja</strong>
+                    </p>
+                    <p><em>Graduated: May 2019</em></p>
+                    <p>Completed higher secondary education with a focus on core subjects including Mathematics, Physics, and Chemistry, laying the foundation for advanced studies in technology and engineering.</p>
+                    <p><em>Percentage:</em> 82.3%</p>
                 </div>
-    </section>
+            </div>
+
+            <!-- Education Item 4: SSC -->
+            <div class="col-md-6 mb-4">
+                <div class="education-item">
+                    <h4>Secondary School Certificate (SSC)</h4>
+                    <p>
+                        <img src="" alt="ZP High School Logo" style="width: 60px; height: 60px;">
+                        <strong>ZP High School, Ieeja</strong>
+                    </p>
+                    <p><em>Graduated: March 2017</em></p>
+                    <p>Achieved foundational knowledge in Mathematics, Physics, and Chemistry, fostering a strong analytical and problem-solving mindset crucial for future academic and professional pursuits.</p>
+                    <p><em>Percentage/CGPA:</em> 7.2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
     <!-- Skills Section -->
@@ -300,109 +471,168 @@
                 <!-- Programming Languages -->
                 <div class="col-md-6 mb-4">
                     <h4><strong>Languages</strong></h4>
-                    <p><img src="./python.png" alt="Python Logo" style="width:60px; height:60px;">Python
-                    </p>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./python.png" alt="Python Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">Python</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
 
                     <h4>Libraries/Frameworks</h4>
-                    <p><img src="./matplotlib.jpeg" alt="Matplotlib Logo" style="width: 60px; height: 60px;">
-                        Matplotlib</p>
-                    <p><img src="./pandas.png" alt="Pandas Logo" style="width: 60px; height: 60px;"> Pandas
-                    </p>
-                    <p><img src="./bootsrap.png" alt="Bootstrap Logo" style="width: 60px; height: 60px;">
-                        Bootstrap (4.5)</p>
-                    <p><img src="./django.png" alt="Django Logo" style="width: 60px; height: 60px;"> Django
-                    </p>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./matplotlib.jpeg" alt="Matplotlib Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">Matplotlib</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./pandas.png" alt="Pandas Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">Pandas</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./bootsrap.png" alt="Bootstrap Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">Bootstrap (4.5)</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./django.png" alt="Django Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">Django</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Tools and Technologies -->
                 <div class="col-md-6 mb-4">
                     <h4>Tools</h4>
-                    <p><img src="./vscode.png" alt="VS Code Logo" style="width: 60px; height: 60px;"> VS
-                        Code</p>
-                     <p><img src="./msoffice.jpg" alt="MS Office" style="width: 60px; height: 60px;">MS Office</p>
-                    <p><img src="./powerbi.png" alt="Power Bi" style="width: 60px; height: 60px;">PowerBi</p>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./vscode.png" alt="VS Code Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">VS Code</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
                     <h4>UI Technologies</h4>
-                    <p><img src="./html.png" alt="HTML5 Logo" style="width: 60px; height: 60px;"> HTML5</p>
-                    <p><img src="./css.png" alt="CSS3 Logo" style="width: 60px; height: 60px;"> CSS3</p>
-                    <p><img src="./js.png" alt="JS Logo" style="width: 60px; height: 60px;">JavaScript</p>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./html.png" alt="HTML5 Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">HTML5</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./css.png" alt="CSS3 Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">CSS3</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
 
                     <h4>Database</h4>
-                    <p><img src="./mysql.png" alt="MySQL Logo" style="width: 60px; height: 60px;"> MySQL</p>
-                    <p><img src="./sqlite3.jpeg" alt="SQLite3 Logo" style="width: 60px; height: 60px;">
-                        SQLite3</p>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./mysql.png" alt="MySQL Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">MySQL</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item d-flex align-items-center mb-3">
+                        <img src="./sqlite3.jpeg" alt="SQLite3 Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <p class="ml-3">SQLite3</p>
+                        <div class="progress skill-progress ml-auto">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="row">
-                <!-- Project 1 -->
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="./data_analysis.jpeg" class="card-img-top" alt="Data Analysis Using Python">
-                        <div class="card-body">
-                            <h4 class="card-title">Data Analysis Using Python</h4>
-                            <p class="card-text"><strong>Technologies Used:</strong> Python, Pandas, Django, MySQL, MS
-                                SQL Server, Text Files, MS Excel</p>
-                            <ul>
-                                <li>Generated synthetic data using Django Faker module.</li>
-                                <li>Conducted exploratory data analysis (EDA).</li>
-                                <li>Created visualizations using Matplotlib.</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
-                            <a href="#" class="btn btn-outline-secondary">GitHub</a>
-                        </div>
+        <h2>Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-lg border-light">
+                    <img src="./data_analysis.jpeg" class="card-img-top" alt="Advanced Data Analysis Using Python">
+                    <div class="card-body">
+                        <h4 class="card-title">Advanced Data Analysis with Python</h4>
+                        <p class="card-text"><strong>Technologies Utilized:</strong> Python, Pandas, Django, MySQL, MS SQL Server, Text Files, MS Excel</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle"></i> Synthesized data with the Django Faker module.</li>
+                            <li><i class="fas fa-check-circle"></i> Conducted thorough exploratory data analysis (EDA).</li>
+                            <li><i class="fas fa-check-circle"></i> Developed intricate visualizations using Matplotlib for data interpretation.</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary">Explore Project</a>
+                        <a href="#" class="btn btn-outline-secondary">View on GitHub</a>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="./bus_ticket.webp" class="card-img-top" alt="Online Bus Ticket Reservation System">
-                        <div class="card-body">
-                            <h4 class="card-title">Online Bus Ticket Reservation System</h4>
-                            <p class="card-text"><strong>Technologies Used:</strong> Python, Django, Bootstrap, CSS,
-                                JavaScript, SQLite3</p>
-                            <ul>
-                                <li>Developed a platform for bus seat reservations.</li>
-                                <li>Implemented user-friendly features for an enhanced experience.</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
-                            <a href="#" class="btn btn-outline-secondary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more projects as needed -->
             </div>
+            <!-- Project 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-lg border-light">
+                    <img src="./bus_ticket.jpg" class="card-img-top" alt="Online Bus Ticket Reservation System">
+                    <div class="card-body">
+                        <h4 class="card-title">Online Bus Ticket Reservation System</h4>
+                        <p class="card-text"><strong>Technologies Utilized:</strong> Python, Django, Bootstrap, CSS, JavaScript, SQLite3</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle"></i> Architected a dynamic platform for seamless bus seat reservations.</li>
+                            <li><i class="fas fa-check-circle"></i> Integrated intuitive features for an enhanced user experience.</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary">Explore Project</a>
+                        <a href="#" class="btn btn-outline-secondary">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <!-- Timeline Item -->
-                <div class="timeline-item mb-4">
-                    <h4>AARAM IT Solutions | Full Stack Developer Intern</h4>
-                    <p><em>Dec 2023 - May 2024 | Hyderabad</em></p>
-                    <ul>
-                        <li>Developed web applications using Python and Django.</li>
-                        <li>Designed responsive front-end interfaces with HTML, CSS, and JavaScript.</li>
-                        <li>Implemented time management practices to ensure deadlines were met.</li>
-                        <li>Integrated new technologies for optimized project outcomes.</li>
-                    </ul>
-                    <a href="https://drive.google.com/file/d/15xRt7FzbJSCGohJeNw0_k7GGpQ2XVs3I/view"
-                        class="btn btn-outline-primary">Offer Letter</a>
-                    <a href="https://drive.google.com/file/d/16AHQgHGAft3ldrckkuC3b2UdzPTsTd6H/view"
-                        class="btn btn-outline-secondary">Certification</a>
-                </div>
-                <!-- Add more timeline items as needed -->
-            </div>
-        </div>
-    </section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience-section py-5">
+  <div class="container">
+      <h2 class="text-center mb-5">Professional Experience</h2>
+              <!-- Timeline Content -->
+              <div class="col-md-10">
+                  <div class="card border-0 shadow-sm">
+                      <div class="card-body">
+                          <h4 class="card-title">Full Stack Developer Intern</h4>
+                          <p class="card-text"><strong>AARAM IT Solutions</strong> | Hyderabad</p>
+                          <p class="card-text"><em>Dec 2023 - May 2024</em></p>
+                          <ul class="timeline-details">
+                              <li><i class="fas fa-check-circle text-success"></i> Architected and developed robust web applications utilizing Python and Django.</li>
+                              <li><i class="fas fa-check-circle text-success"></i> Engineered responsive and intuitive front-end interfaces using HTML, CSS, and JavaScript.</li>
+                              <li><i class="fas fa-check-circle text-success"></i> Applied strategic time management methodologies to consistently meet project deadlines.</li>
+                              <li><i class="fas fa-check-circle text-success"></i> Integrated cutting-edge technologies to enhance project performance and achieve optimal outcomes.</li>
+                          </ul>
+                          <div class="timeline-actions mt-3">
+                              <a href="https://drive.google.com/file/d/15xRt7FzbJSCGohJeNw0_k7GGpQ2XVs3I/view" class="btn btn-outline-primary">View Offer Letter</a>
+                              <a href="https://drive.google.com/file/d/16AHQgHGAft3ldrckkuC3b2UdzPTsTd6H/view" class="btn btn-outline-secondary">View Certification</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Add more timeline items as needed -->
+      </div>
+  </div>
+</section>
+
+
 
     <!-- Certifications Section -->
     <section id="certifications" class="certifications-section">
@@ -482,16 +712,21 @@
 
     <!-- Footer Section -->
     <footer class="footer bg-dark text-white">
-        <div class="container text-center">
-            <p>&copy; 2024 Sandesh Kenchugundi. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/sandesh-kenchugundi-076629245/" class="text-white" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a> |
-                <a href="https://github.com/sandesh9160" class="text-white" target="_blank"
-                    rel="noopener noreferrer">GitHub</a>
-            </div>
+    <div class="container text-center">
+        <p>&copy; 2024 Sandesh Kenchugundi. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sandesh-kenchugundi-076629245/" class="text-white" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            |
+            <a href="https://github.com/sandesh9160" class="text-white" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> GitHub
+            </a>
         </div>
-    </footer>
+    </div>
+</footer>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
