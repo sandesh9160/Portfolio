@@ -257,30 +257,40 @@ ul.list-unstyled i {
 }
 
 /* Certifications Section */
-.certifications-section {
-  background-color: #f8f9fa;
-  padding: 60px 0;
+.certifications-section h2 {
+    animation: fadeInDown 1s ease-out;
 }
 
-.certifications-section .certification {
-  background: #ffffff;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.certification {
+    animation: fadeInUp 1.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.certifications-section .certification:hover {
-  transform: translateY(-5px);
+.certification:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Section */
-.contact-section {
-  background: #dfcda4;
-  color: #040404;
-  padding: 60px 0;
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-section p a {
@@ -406,7 +416,7 @@ html {
                 <div class="education-item">
                     <h4>Master of Computer Applications (MCA)</h4>
                     <p>
-                        <img src="./saifabad-removebg-preview.png" alt="University College of Science Logo"
+                        <img src=".\images\saifabad-removebg-preview.png" alt="University College of Science Logo"
                             style="width: 60px; height: 60px;">
                         <strong>University College of Science, Saifabad</strong>
                     </p>
@@ -421,7 +431,7 @@ html {
                 <div class="education-item">
                     <h4>Bachelor of Science in Computer Science</h4>
                     <p>
-                        <img src="./bjr.jpeg" alt="BJR College Logo" style="width: 60px; height: 60px;">
+                        <img src="./images/bjr.jpeg" alt="BJR College Logo" style="width: 60px; height: 60px;">
                         <strong>BJR Government Degree College, Narayanaguda</strong>
                     </p>
                     <p><em>Graduated: May 2022</em></p>
@@ -435,7 +445,7 @@ html {
                 <div class="education-item">
                     <h4>Intermediate (XII)</h4>
                     <p>
-                        <img src="./inter.png" alt="Sri Hari Hara Junior College Logo" style="width: 60px; height: 60px;">
+                        <img src="./images/inter.png" alt="Sri Hari Hara Junior College Logo" style="width: 60px; height: 60px;">
                         <strong>Sri Hari Hara Junior College, Ieeja</strong>
                     </p>
                     <p><em>Graduated: May 2019</em></p>
@@ -472,7 +482,7 @@ html {
                 <div class="col-md-6 mb-4">
                     <h4><strong>Languages</strong></h4>
                     <div class="skill-item d-flex align-items-center mb-3">
-                        <img src="./python.png" alt="Python Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <img src="./images/python.png" alt="Python Logo" style="width: 60px; height: 60px;" class="animated-icon">
                         <p class="ml-3">Python</p>
                         <div class="progress skill-progress ml-auto">
                             <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
@@ -481,7 +491,7 @@ html {
 
                     <h4>Libraries/Frameworks</h4>
                     <div class="skill-item d-flex align-items-center mb-3">
-                        <img src="./matplotlib.jpeg" alt="Matplotlib Logo" style="width: 60px; height: 60px;" class="animated-icon">
+                        <img src="./images/matplotlib.jpeg" alt="Matplotlib Logo" style="width: 60px; height: 60px;" class="animated-icon">
                         <p class="ml-3">Matplotlib</p>
                         <div class="progress skill-progress ml-auto">
                             <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -583,7 +593,7 @@ html {
             <!-- Project 2 -->
             <div class="col-md-6 mb-4">
                 <div class="card h-100 shadow-lg border-light">
-                    <img src="./bus_ticket.jpg" class="card-img-top" alt="Online Bus Ticket Reservation System">
+                    <img src="./bus_ticket.webp" class="card-img-top" alt="Online Bus Ticket Reservation System">
                     <div class="card-body">
                         <h4 class="card-title">Online Bus Ticket Reservation System</h4>
                         <p class="card-text"><strong>Technologies Utilized:</strong> Python, Django, Bootstrap, CSS, JavaScript, SQLite3</p>
@@ -631,49 +641,38 @@ html {
       </div>
   </div>
 </section>
-
-
-
     <!-- Certifications Section -->
-    <section id="certifications" class="certifications-section">
-        <div class="container">
-            <h2>Certifications</h2>
-            <div class="row">
-                <!-- Certification 1 -->
-                <div class="col-md-4">
-                    <div class="certification">
-                        <h4>SQL (Basic)</h4>
-                        <p>Issued by:<a
-                                href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-92020922-d628-4b02-9cc3-5ec3665aee6c.pdf">HackerRank</a>
-                        </p>
-                        <p>Acquired knowledge of SQL basics, including querying and data manipulation.</p>
-                    </div>
+    <section id="certifications" class="certifications-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Professional Certifications</h2>
+        <div class="row">
+            <!-- Certification 1 -->
+            <div class="col-md-4">
+                <div class="certification shadow-lg p-4 mb-4 bg-white rounded">
+                    <h4 class="text-primary">SQL (Basic)</h4>
+                    <p><strong>Issued by:</strong> <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-92020922-d628-4b02-9cc3-5ec3665aee6c.pdf" target="_blank">HackerRank</a></p>
+                    <p>Demonstrated foundational expertise in Structured Query Language (SQL), focusing on efficient data querying, manipulation, and retrieval processes.</p>
                 </div>
-                <!-- Certification 2 -->
-                <div class="col-md-4">
-                    <div class="certification">
-                        <h4>Python</h4>
-                        Issued by: <a
-                            href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-92020922-d628-4b02-9cc3-5ec3665aee6c.pdf">Udemy</a>
-                        <p>Completed a comprehensive Python programming course.</p>
-                    </div>
+            </div>
+            <!-- Certification 2 -->
+            <div class="col-md-4">
+                <div class="certification shadow-lg p-4 mb-4 bg-white rounded">
+                    <h4 class="text-primary">Python Programming</h4>
+                    <p><strong>Issued by:</strong> <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-92020922-d628-4b02-9cc3-5ec3665aee6c.pdf" target="_blank">Udemy</a></p>
+                    <p>Successfully completed an intensive Python development program, encompassing comprehensive object-oriented programming (OOP) principles, data structures, and algorithmic solutions.</p>
                 </div>
-                <!-- Certification 3 -->
-                <div class="col-md-4">
-                    <div class="certification">
-                        <h4>Python Full Stack Web Development</h4>
-                        <p>Issued by:<a
-                                href="https://drive.google.com/file/d/1CO2uMk-TR12QVytBaOFcCnn2UD_zM_Q3/view">Narayana
-                                Tech House</a>
-                        </p>
-                        <p>Mastered full stack web development using Python, including front-end and back-end
-                            technologies.</p>
-                    </div>
+            </div>
+            <!-- Certification 3 -->
+            <div class="col-md-4">
+                <div class="certification shadow-lg p-4 mb-4 bg-white rounded">
+                    <h4 class="text-primary">Full Stack Web Development (Python)</h4>
+                    <p><strong>Issued by:</strong> <a href="https://drive.google.com/file/d/1CO2uMk-TR12QVytBaOFcCnn2UD_zM_Q3/view" target="_blank">Narayana Tech House</a></p>
+                    <p>Achieved mastery in Python-based full stack web development, integrating advanced front-end technologies (HTML5, CSS3, JavaScript) with robust back-end frameworks (Django, Flask).</p>
                 </div>
-                <!-- Add more certifications as needed -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
