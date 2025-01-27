@@ -673,12 +673,10 @@ html {
 </section>
 
     <!-- Contact Section -->
-    
-    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Contact Me</h2>
-            <form id="contact-form" novalidate>
+            <form id="contact-form" class="needs-validation" novalidate>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="name">Name <span class="text-danger">*</span></label>
@@ -732,35 +730,29 @@ html {
     <!-- Optional JavaScript for Form Validation -->
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-
         // Custom Form Validation
-        (function () {
-            'use strict';
-            var form = document.getElementById('contact-form');
-            form.addEventListener('submit', function (event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        })();
+(function () {
+    'use strict';
+
+    // Wait for the DOM to load
+    window.addEventListener('load', function () {
+        // Get the form element
+        var form = document.getElementById('contact-form');
+
+        // Add submit event listener to the form
+        form.addEventListener('submit', function (event) {
+            // Prevent form submission if fields are invalid
+            if (!form.checkValidity()) {
+                event.preventDefault(); // Prevent default submission
+                event.stopPropagation(); // Stop further propagation
+            }
+
+            // Add validation class to the form
+            form.classList.add('was-validated');
+        });
+    });
+})();
+
     </script>
 </body>
 
